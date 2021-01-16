@@ -21,7 +21,7 @@ class Perceptron():
         for _  in range(self.n_iter):
             errores=0
             for muestra,target in zip(X,y):
-                update=self.learning_rate*(target.self.predict(muestra))
+                update=self.learning_rate*(target-self.predict(muestra))
                 self.weights_[1:]+=muestra*update
                 self.weights_[0]+=update
                 errores+=int(update!=0)
